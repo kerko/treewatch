@@ -58,12 +58,6 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.0.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.23.0.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
-    </Reference>
     <Reference Include="NGraphics.Android.Custom">
       <HintPath>..\packages\Xam.Plugins.Forms.Svg.1.0.0.25\lib\MonoAndroid10\NGraphics.Android.Custom.dll</HintPath>
     </Reference>
@@ -118,6 +112,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\HamburgerMenuIcon.png" />
   </ItemGroup>
   <Import Project="..\TreeWatch.projitems" Label="Shared" Condition="Exists('..\TreeWatch.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

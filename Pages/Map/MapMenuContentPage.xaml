@@ -4,8 +4,6 @@
 		<OnPlatform x:TypeArguments="Thickness" iOS="20, 30, 20, 20" Android="20, 20, 20, 20" WinPhone="20, 20, 20, 20" />
 	</ContentPage.Padding>
 	<ContentPage.Content>
-		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Vertical" Spacing="15">
-			<Label x:Name="siteLabel" />
-		</StackLayout>
+		
 	</ContentPage.Content>
 </ContentPage>
