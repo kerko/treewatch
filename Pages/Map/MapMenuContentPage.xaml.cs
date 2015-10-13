@@ -15,7 +15,7 @@ namespace TreeWatch
 			InitializeComponent ();
 
 			Title = "Menu";
-			Icon = "Icons/HamburgerMenu/HamburgerMenuIcon.png";
+			Icon = "HamburgerMenuIcon.png";
 
 			list = new FieldListView ();
 			list.ItemSelected += FieldSelected;
