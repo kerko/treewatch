@@ -1,4 +1,4 @@
-﻿using ExtendedMap.Forms.Plugin.Abstractions;
+using ExtendedMap.Forms.Plugin.Abstractions;
 
 using System;
 using System.Collections.Generic;
