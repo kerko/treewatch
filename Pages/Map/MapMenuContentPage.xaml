@@ -1,9 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TreeWatch.MapMenuContentPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="SearchBarStyle" TargetType="SearchBar">
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="20, 20, 20, 20" />
 	</ContentPage.Padding>
 	<ContentPage.Content>
-		
+		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="15">
+			<SearchBar x:Name="searchBar" TextChanged="SearchBarTextChanged" SearchButtonPressed="SearchBarSearchButtonPressed" Placeholder="Search" />
+			<ListView x:Name="FieldView" ItemSelected="FieldSelected">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Name}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
