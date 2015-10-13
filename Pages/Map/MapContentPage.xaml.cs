@@ -1,10 +1,10 @@
-﻿using System;
+﻿using ExtendedMap.Forms.Plugin.Abstractions;
+
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
-using ExtendedMap.Forms.Plugin.Abstractions;
-
 
 namespace TreeWatch
 {
@@ -17,6 +17,7 @@ namespace TreeWatch
 			BindingContext = new MapViewModel ();
 
 			Title = "Map";
+			Icon = "Icons/Map/MapTabBarIcon.png";
 
 			//configurations for navigation bar
 			NavigationPage.SetBackButtonTitle (this, Title);
