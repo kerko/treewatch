@@ -12,7 +12,7 @@ namespace TreeWatch
 			InitializeComponent ();
 
 			Title = "Menu";
-			Icon = "Icons/HamburgerMenu/HamburgerMenuIcon.png";
+			Icon = "HamburgerMenuIcon.png";
 
 			int rowCount = 5;
 			RowDefinitionCollection rows = new RowDefinitionCollection();
