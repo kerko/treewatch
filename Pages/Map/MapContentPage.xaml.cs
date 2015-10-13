@@ -1,10 +1,10 @@
+using ExtendedMap.Forms.Plugin.Abstractions;
+
 using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
-using ExtendedMap.Forms.Plugin.Abstractions;
-
 
 namespace TreeWatch
 {
