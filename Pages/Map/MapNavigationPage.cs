@@ -9,7 +9,7 @@ namespace TreeWatch
 		public MapNavigationPage (Page root) : base (root)
 		{
 			Title = root.Title;
-			Icon = "Icons/Map/MapTabBarIcon.png";
+			Icon = root.Icon;
 		}
 		
 	}

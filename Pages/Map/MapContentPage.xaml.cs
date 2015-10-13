@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+
 #if __ANDROID__
 using Xamarin.Forms.Maps;
 #endif
@@ -13,19 +14,15 @@ namespace TreeWatch
 		{
 			InitializeComponent ();
 
-			#if __ANDROID__
-			this.Content = new ExtendedMap ();
-			#endif
+			Title = "Map";
+			Icon = "Icons/Map/MapTabBarIcon.png";
 
 			//configurations for navigation bar
 			NavigationPage.SetBackButtonTitle (this, Title);
-			Title = "Map";
-//			ToolbarItems.Add(new ToolbarItem {
-//				Text = "Launch",
-////				Icon = "Launch.png",
-//				Order = ToolbarItemOrder.Primary,
-//				Command = new Command(() => Navigation.PushAsync(new MapMasterDetailPage()))
-//			});
+
+			#if __ANDROID__
+			this.Content = new ExtendedMap ();
+			#endif
 
 			//action after a field is clicked
 //			siteButton.Clicked += async (object sender, EventArgs e) => 
