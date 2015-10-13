@@ -8,7 +8,7 @@ namespace TreeWatch
 	{
 		public CustomTabbedPage ()
 		{
-			// map tab page test
+			// map tab page
 			this.Children.Add (new MapMasterDetailPage ());
 
 			// note tab page
