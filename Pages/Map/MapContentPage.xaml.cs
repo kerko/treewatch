@@ -15,7 +15,9 @@ namespace TreeWatch
 			InitializeComponent ();
 
 			Title = "Map";
-			Icon = "Icons/Map/MapTabBarIcon.png";
+			if (Device.OS == TargetPlatform.iOS) {
+				Icon = "MapTabBarIcon.png";
+			}
 
 			//configurations for navigation bar
 			NavigationPage.SetBackButtonTitle (this, Title);

@@ -97,6 +97,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\HamburgerMenuIcon.png" />
   </ItemGroup>
   <Import Project="..\TreeWatch.projitems" Label="Shared" Condition="Exists('..\TreeWatch.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
