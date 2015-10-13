@@ -14,19 +14,17 @@ namespace TreeWatch
 		{
 			InitializeComponent ();
 
-			NavigationPage.SetBackButtonTitle (this, "Back");
-
 			BindingContext = new MapViewModel ();
+
+			Title = "Map";
+			Icon = "Icons/Map/MapTabBarIcon.png";
 
 			//configurations for navigation bar
 			NavigationPage.SetBackButtonTitle (this, Title);
-			Title = "Map";
-//			ToolbarItems.Add(new ToolbarItem {
-//				Text = "Launch",
-////				Icon = "Launch.png",
-//				Order = ToolbarItemOrder.Primary,
-//				Command = new Command(() => Navigation.PushAsync(new MapMasterDetailPage()))
-//			});
+
+			#if __ANDROID__
+			this.Content = new ExtendedMap ();
+			#endif
 
 			this.Content = CreateMapContentView ();
 		}
