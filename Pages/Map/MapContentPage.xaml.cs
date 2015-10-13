@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -17,6 +17,16 @@ namespace TreeWatch
 			NavigationPage.SetBackButtonTitle (this, "Back");
 
 			BindingContext = new MapViewModel ();
+
+			//configurations for navigation bar
+			NavigationPage.SetBackButtonTitle (this, Title);
+			Title = "Map";
+//			ToolbarItems.Add(new ToolbarItem {
+//				Text = "Launch",
+////				Icon = "Launch.png",
+//				Order = ToolbarItemOrder.Primary,
+//				Command = new Command(() => Navigation.PushAsync(new MapMasterDetailPage()))
+//			});
 
 			this.Content = CreateMapContentView ();
 		}
