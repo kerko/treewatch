@@ -8,8 +8,8 @@ namespace TreeWatch
 	{
 		public ToDoNavigationPage (Page root) : base (root)
 		{
-			Title = "ToDo";
-			Icon = "Icons/ToDo/ToDoTabBarIcon.png";
+			Title = root.Title;
+			Icon = root.Icon;
 		}
 	}
 }
