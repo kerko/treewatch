@@ -143,6 +143,7 @@
     <BundleResource Include="Resources\Icons\Note\NoteTabBarIcon.png" />
     <BundleResource Include="Resources\Icons\Settings\SettingsTabBarIcon.png" />
     <BundleResource Include="Resources\Icons\ToDo\ToDoTabBarIcon.png" />
+    <BundleResource Include="Resources\Icons\HamburgerMenu\HamburgerMenuIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Icons\" />
@@ -151,5 +152,6 @@
     <Folder Include="Resources\Icons\Note\" />
     <Folder Include="Resources\Icons\Settings\" />
     <Folder Include="Resources\Icons\ToDo\" />
+    <Folder Include="Resources\Icons\HamburgerMenu\" />
   </ItemGroup>
 </Project>
