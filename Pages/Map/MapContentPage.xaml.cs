@@ -17,9 +17,15 @@ namespace TreeWatch
 			this.Content = new ExtendedMap ();
 			#endif
 
-			//site configurations
-			Title = "Map";
+			//configurations for navigation bar
 			NavigationPage.SetBackButtonTitle (this, Title);
+			Title = "Map";
+//			ToolbarItems.Add(new ToolbarItem {
+//				Text = "Launch",
+////				Icon = "Launch.png",
+//				Order = ToolbarItemOrder.Primary,
+//				Command = new Command(() => Navigation.PushAsync(new MapMasterDetailPage()))
+//			});
 
 			//action after a field is clicked
 //			siteButton.Clicked += async (object sender, EventArgs e) => 
