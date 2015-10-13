@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TreeWatch.MapContentPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="Yellow" />
+				<Setter Property="BorderRadius" Value="0" />
+				<Setter Property="HeightRequest" Value="42" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
 	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness" iOS="20, 40, 20, 20" Android="20, 20, 20, 20" WinPhone="20, 20, 20, 20" />
 	</ContentPage.Padding>
 	<ContentPage.Content>
-		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Vertical" Spacing="15">
+		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="15">
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
