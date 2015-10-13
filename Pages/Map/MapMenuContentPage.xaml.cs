@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using Xamarin.Forms;
 
@@ -7,8 +8,7 @@ namespace TreeWatch
 {
 	public partial class MapMenuContentPage : ContentPage
 	{
-		private FieldListView list;
-		private SearchBar searchbar;
+		private Fields fields = new Fields ();
 
 		public MapMenuContentPage ()
 		{
@@ -17,34 +17,37 @@ namespace TreeWatch
 			Title = "Menu";
 			Icon = "HamburgerMenuIcon.png";
 
-			list = new FieldListView ();
-			list.ItemSelected += FieldSelected;
-
-			searchbar = new SearchBar () {
-				Placeholder = "Search",
-			};
-
-			searchbar.TextChanged += (sender, e) => list.FilterLocations (searchbar.Text);
-			searchbar.SearchButtonPressed += (sender, e) => {
-				list.FilterLocations (searchbar.Text);
-			};
-
-			var stack = new StackLayout () {
-				Children = {
-					searchbar,
-					list
-				}
-			};
-
-			Content = stack;
+			FieldView.ItemsSource = fields;
 		}
 
-		private void FieldSelected(object sender, SelectedItemChangedEventArgs e)
+		private void SearchBarTextChanged (object sender, EventArgs args)
+		{
+			FilterFields (searchBar.Text);
+		}
+
+		private void SearchBarSearchButtonPressed (object sender, EventArgs args)
+		{
+			FilterFields (searchBar.Text);
+		}
+
+		private void FilterFields (String searchBarText)
+		{
+			FieldView.BeginRefresh ();
+
+			if (string.IsNullOrWhiteSpace (searchBarText)) {
+				FieldView.ItemsSource = fields;
+			} else {
+				FieldView.ItemsSource = fields.Where (x => x.Name.ToLower ().Contains (searchBarText.ToLower ()));
+			}
+
+			FieldView.EndRefresh ();
+		}
+
+		private void FieldSelected (object sender, SelectedItemChangedEventArgs e)
 		{
 			if (e.SelectedItem == null)
 				return;
 			var selected = (Field)e.SelectedItem;
-			Console.WriteLine("selected field: {0}", selected.Name);
 		}
 	}
 }
