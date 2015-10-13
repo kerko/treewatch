@@ -8,8 +8,8 @@ namespace TreeWatch
 	{
 		public NoteNavigationPage (Page root) : base (root)
 		{
-			Title = "Note";
-			Icon = "Icons/Note/NoteTabBarIcon.png";
+			Title = root.Title;
+			Icon = root.Icon;
 		}
 		
 	}

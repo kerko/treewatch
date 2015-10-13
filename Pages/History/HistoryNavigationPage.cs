@@ -8,8 +8,8 @@ namespace TreeWatch
 	{
 		public HistoryNavigationPage (Page root) : base (root)
 		{
-			Title = "History";
-			Icon = "Icons/History/HistoryTabBarIcon.png";
+			Title = root.Title;
+			Icon = root.Icon;
 		}
 		
 	}
