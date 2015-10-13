@@ -7,6 +7,9 @@ namespace TreeWatch
 {
 	public partial class MapMenuContentPage : ContentPage
 	{
+		private FieldListView list;
+		private SearchBar searchbar;
+
 		public MapMenuContentPage ()
 		{
 			InitializeComponent ();
@@ -14,46 +17,34 @@ namespace TreeWatch
 			Title = "Menu";
 			Icon = "Icons/HamburgerMenu/HamburgerMenuIcon.png";
 
-			int rowCount = 5;
-			RowDefinitionCollection rows = new RowDefinitionCollection();
-			for (int i = 0; i < rowCount; i++) 
-			{
-				rows.Add(new RowDefinition { Height = GridLength.Auto });
-			}
+			list = new FieldListView ();
+			list.ItemSelected += FieldSelected;
 
+			searchbar = new SearchBar () {
+				Placeholder = "Search",
+			};
 
-			Grid grid = new Grid
-			{
-				VerticalOptions = LayoutOptions.FillAndExpand,
-				RowDefinitions = rows,
-				ColumnDefinitions = 
-				{
-					new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star)},
-					new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star)}}
-				};
-			for(int i = 0; i < rowCount; i++)
-			{
-				grid.Children.Add(new Label
-					{
-						Text = "Layout " + i,
-						FontSize = 25,
-						HorizontalOptions = LayoutOptions.StartAndExpand
-					}, 0, i);
+			searchbar.TextChanged += (sender, e) => list.FilterLocations (searchbar.Text);
+			searchbar.SearchButtonPressed += (sender, e) => {
+				list.FilterLocations (searchbar.Text);
+			};
 
-				Switch switcher = new Switch
-				{
-					HorizontalOptions = LayoutOptions.End,
-					VerticalOptions = LayoutOptions.CenterAndExpand
-				};
-				switcher.Toggled += switcher_Toggled;
-				grid.Children.Add (switcher, 1, i);
-			}
-			Content = grid;
+			var stack = new StackLayout () {
+				Children = {
+					searchbar,
+					list
+				}
+			};
+
+			Content = stack;
 		}
 
-		void switcher_Toggled(object sender, ToggledEventArgs e)
+		private void FieldSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			//TODO
+			if (e.SelectedItem == null)
+				return;
+			var selected = (Field)e.SelectedItem;
+			Console.WriteLine("selected field: {0}", selected.Name);
 		}
 	}
 }
