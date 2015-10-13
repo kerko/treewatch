@@ -40,6 +40,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\MapMenuContentPage.xaml.cs">
       <DependentUpon>MapMenuContentPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\Field.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\Fields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\FieldListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\History\HistoryContentPage.xaml">
