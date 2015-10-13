@@ -138,20 +138,11 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Icons\Map\MapTabBarIcon.png" />
-    <BundleResource Include="Resources\Icons\History\HistoryTabBarIcon.png" />
-    <BundleResource Include="Resources\Icons\Note\NoteTabBarIcon.png" />
-    <BundleResource Include="Resources\Icons\Settings\SettingsTabBarIcon.png" />
-    <BundleResource Include="Resources\Icons\ToDo\ToDoTabBarIcon.png" />
-    <BundleResource Include="Resources\Icons\HamburgerMenu\HamburgerMenuIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Icons\" />
-    <Folder Include="Resources\Icons\Map\" />
-    <Folder Include="Resources\Icons\History\" />
-    <Folder Include="Resources\Icons\Note\" />
-    <Folder Include="Resources\Icons\Settings\" />
-    <Folder Include="Resources\Icons\ToDo\" />
-    <Folder Include="Resources\Icons\HamburgerMenu\" />
+    <BundleResource Include="Resources\HamburgerMenuIcon.png" />
+    <BundleResource Include="Resources\HistoryTabBarIcon.png" />
+    <BundleResource Include="Resources\MapTabBarIcon.png" />
+    <BundleResource Include="Resources\NoteTabBarIcon.png" />
+    <BundleResource Include="Resources\SettingsTabBarIcon.png" />
+    <BundleResource Include="Resources\ToDoTabBarIcon.png" />
   </ItemGroup>
 </Project>

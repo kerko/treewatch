@@ -13,10 +13,13 @@ namespace TreeWatch
 
 			//site configurations
 			Title = "ToDo";
+			if (Device.OS == TargetPlatform.iOS) {
+				Icon = "ToDoTabBarIcon.png";
+			}
 
 			//filler
 			BackgroundColor = Color.Aqua;
-			siteLabel.Text = "ToDo";
+			siteLabel.Text = Title;
 		}
 	}
 }

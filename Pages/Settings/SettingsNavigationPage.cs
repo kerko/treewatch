@@ -8,8 +8,8 @@ namespace TreeWatch
 	{
 		public SettingsNavigationPage (Page root) : base (root)
 		{
-			Title = "Settings";
-			Icon = "Icons/Settings/SettingsTabBarIcon.png";
+			Title = root.Title;
+			Icon = root.Icon;
 		}
 	}
 }
