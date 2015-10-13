@@ -12,7 +12,6 @@ namespace TreeWatch
 
 		public MapMenuContentPage ()
 		{
-//TODO
 			InitializeComponent ();
 
 			Title = "Menu";
