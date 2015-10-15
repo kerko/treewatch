@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<<<<<<< HEAD
 	<PropertyGroup>
 		<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
 		<HasSharedItems>true</HasSharedItems>
@@ -66,4 +67,86 @@
 		<Folder Include="$(MSBuildThisFileDirectory)Pages\Settings\" />
 		<Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
 	</ItemGroup>
+=======
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{CA7B216D-8C37-4B5B-B681-D341217FD49E}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>TreeWatch</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)TreeWatch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Keys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\CustomTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\History\HistoryContentPage.xaml.cs">
+      <DependentUpon>HistoryContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\History\HistoryNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Note\NoteContentPage.xaml.cs">
+      <DependentUpon>NoteContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Note\NoteNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Settings\SettingsContentPage.xaml.cs">
+      <DependentUpon>SettingsContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Settings\SettingsNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\ToDo\ToDoContentPage.xaml.cs">
+      <DependentUpon>ToDoContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\ToDo\ToDoNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Map\Field\Field.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Map\Field\Fields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\Overlay\OverlayContentPage.xaml.cs">
+      <DependentUpon>OverlayContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapMasterDetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapContentPage.xaml.cs">
+      <DependentUpon>MapContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapMenu\MapMenuContentPage.xaml.cs">
+      <DependentUpon>MapMenuContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Map\MapViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\History\HistoryContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Note\NoteContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Settings\SettingsContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ToDo\ToDoContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Map\Overlay\OverlayContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Map\MapContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Map\MapMenu\MapMenuContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\History\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Map\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\ToDo\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Note\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Map\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Map\Field\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Map\Overlay\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Map\MapMenu\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Map\" />
+  </ItemGroup>
+>>>>>>> #326 time:3 update file structure and read into mvvm
 </Project>
