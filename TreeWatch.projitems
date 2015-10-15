@@ -10,69 +10,74 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)TreeWatch.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\CustomTabbedPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\History\HistoryContentPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Keys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\CustomTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\History\HistoryContentPage.xaml.cs">
       <DependentUpon>HistoryContentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\History\HistoryNavigationPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\MapContentPage.xaml.cs">
-      <DependentUpon>MapContentPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\MapNavigationPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Note\NoteContentPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)View\History\HistoryNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Note\NoteContentPage.xaml.cs">
       <DependentUpon>NoteContentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Note\NoteNavigationPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Settings\SettingsContentPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)View\Note\NoteNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Settings\SettingsContentPage.xaml.cs">
       <DependentUpon>SettingsContentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Settings\SettingsNavigationPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\ToDo\ToDoContentPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)View\Settings\SettingsNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\ToDo\ToDoContentPage.xaml.cs">
       <DependentUpon>ToDoContentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\ToDo\ToDoNavigationPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\OverlayContentPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)View\ToDo\ToDoNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Map\Field\Field.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Map\Field\Fields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\Overlay\OverlayContentPage.xaml.cs">
       <DependentUpon>OverlayContentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Keys.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MapViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\MapMasterDetailPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\MapMenuContentPage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapMasterDetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapContentPage.xaml.cs">
+      <DependentUpon>MapContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\Map\MapMenu\MapMenuContentPage.xaml.cs">
       <DependentUpon>MapMenuContentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\Field.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\Map\Fields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Map\MapViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\History\HistoryContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\History\HistoryContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Map\MapContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Note\NoteContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Note\NoteContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Settings\SettingsContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Settings\SettingsContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\ToDo\ToDoContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ToDo\ToDoContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Map\Overlay\OverlayContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Map\OverlayContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Map\MapContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Map\MapMenuContentPage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\Map\MapMenu\MapMenuContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\History\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\Map\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\ToDo\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\Note\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Pages\Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\History\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Map\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\ToDo\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Note\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Map\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Map\Field\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Map\Overlay\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\Map\MapMenu\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Map\" />
   </ItemGroup>
 </Project>
