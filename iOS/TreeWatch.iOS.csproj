@@ -143,4 +143,10 @@
     <BundleResource Include="Resources\SettingsTabBarIcon.png" />
     <BundleResource Include="Resources\ToDoTabBarIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googlemapsios">
+      <Version>1.9.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
 </Project>
