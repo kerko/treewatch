@@ -24,10 +24,6 @@ namespace TreeWatch
 			//configurations for navigation bar
 			NavigationPage.SetBackButtonTitle (this, Title);
 
-			#if __ANDROID__
-			this.Content = new ExtendedMap ();
-			#endif
-
 			this.Content = CreateMapContentView ();
 		}
 
