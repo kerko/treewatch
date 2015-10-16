@@ -13,10 +13,9 @@ namespace TreeWatch
 
 			//site configurations
 			Title = "Settings";
-
-			//filler
-			BackgroundColor = Color.Aqua;
-			siteLabel.Text = "Settings";
+			if (Device.OS == TargetPlatform.iOS) {
+				Icon = "SettingsTabBarIcon.png";
+			}
 		}
 	}
 }

@@ -13,10 +13,9 @@ namespace TreeWatch
 
 			//site configurations
 			Title = "History";
-
-			//filler
-			BackgroundColor = Color.Aqua;
-			siteLabel.Text = "History";
+			if (Device.OS == TargetPlatform.iOS) {
+				Icon = "HistoryTabBarIcon.png";
+			}
 		}
 	}
 }
