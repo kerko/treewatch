@@ -16,10 +16,6 @@ namespace TreeWatch
 			if (Device.OS == TargetPlatform.iOS) {
 				Icon = "NoteTabBarIcon.png";
 			}
-
-			//filler
-			BackgroundColor = Color.Aqua;
-			siteLabel.Text = Title;
 		}
 	}
 }
