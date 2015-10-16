@@ -36,6 +36,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -60,6 +61,7 @@
     <MtouchDebug>true</MtouchDebug>
     <IpaPackageName>
     </IpaPackageName>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -142,11 +144,5 @@
     <BundleResource Include="Resources\NoteTabBarIcon.png" />
     <BundleResource Include="Resources\SettingsTabBarIcon.png" />
     <BundleResource Include="Resources\ToDoTabBarIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="googlemapsios">
-      <Version>1.9.2</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
   </ItemGroup>
 </Project>
