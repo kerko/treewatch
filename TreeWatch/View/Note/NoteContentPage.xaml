@@ -27,8 +27,10 @@
 				<Entry
 					Placeholder="Title"
 					Keyboard   ="Default" />
-				<Button
-					Text           ="FOTO"
+				<Image
+					x:Name         ="picture"
+					Source         ="camera.png"
+					HeightRequest  ="250"
 					VerticalOptions="StartAndExpand" />
 				<Editor
 					Text           ="Description"
